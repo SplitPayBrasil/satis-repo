@@ -1,10 +1,7 @@
 name: Build Satis Repository
 
 on:
-  # Permite rodar manualmente se precisar forçar uma atualização
   workflow_dispatch:
-  
-  # Roda automaticamente sempre que uma TAG for criada em qualquer branch
   push:
     tags:
       - '*'
@@ -17,11 +14,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathuri/setup-php@v2
-        with:
-          php-version: '8.4'
-          tools: composer
+      - name: Install PHP 8.4 and Composer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y software-properties-common
+          sudo add-apt-repository ppa:ondrej/php -y
+          sudo apt-get update
+          sudo apt-get install -y php8.4 php8.4-cli php8.4-mbstring php8.4-xml php8.4-curl php8.4-zip unzip curl
+          curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+      - name: Verify PHP and Composer
+        run: |
+          php -v
+          composer -V
 
       - name: Install Satis
         run: composer create-project composer/satis --stability=dev --keep-vcs
@@ -29,7 +34,6 @@ jobs:
       - name: Build Satis
         run: php satis/bin/satis build satis.json web/
         env:
-          # Usa o token padrão do GITHUB_TOKEN para autenticar clones HTTPS dos repositórios privados
           COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.GITHUB_TOKEN }}"}}'
 
       - name: Deploy to GitHub Pages
