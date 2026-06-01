@@ -1,12 +1,13 @@
 name: Build Satis Repository
 
 on:
-  # Permite rodar manualmente pela aba "Actions" do GitHub
+  # Permite rodar manualmente se precisar forçar uma atualização
   workflow_dispatch:
   
-  # Opcional: Rodar automaticamente a cada push na branch main (útil se você atualizar o satis.json frequentemente)
+  # Roda automaticamente sempre que uma TAG for criada em qualquer branch
   push:
-    branches: [ main ]
+    tags:
+      - '*'
 
 jobs:
   build:
