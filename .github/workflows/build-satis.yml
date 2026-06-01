@@ -6,6 +6,12 @@ on:
     tags:
       - '*'
 
+# Adicione esta seção de permissões
+permissions:
+  contents: write  # Necessário para fazer push na branch gh-pages
+  pages: write     # Necessário para interagir com o GitHub Pages
+  id-token: write  # Recomendado para autenticação OIDC
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,23 +29,19 @@ jobs:
           sudo apt-get install -y php8.4 php8.4-cli php8.4-mbstring php8.4-xml php8.4-curl php8.4-zip unzip curl
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-      - name: Verify PHP and Composer
-        run: |
-          php -v
-          composer -V
-
       - name: Install Satis
         run: composer create-project composer/satis --stability=dev --keep-vcs
 
       - name: Build Satis
         run: php satis/bin/satis build satis.json web/
         env:
-          # Usa o PAT personalizado (Fine-grained) para autenticar clones HTTPS dos repositórios privados
+          # Usa o PAT personalizado para ler os repositórios privados
           COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.SATIS_GITHUB_TOKEN }}"}}'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
+          # Tenta usar o GITHUB_TOKEN primeiro (com as permissões acima)
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./web
           force_orphan: true
