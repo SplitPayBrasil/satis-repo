@@ -1,0 +1,13 @@
+{
+    "packages": [],
+    "includes": {
+        "include/all$1c9125d6cb6cef95aaef6fea7b155e60a6e750f8.json": {
+            "sha1": "1c9125d6cb6cef95aaef6fea7b155e60a6e750f8"
+        }
+    },
+    "metadata-url": "/satis-repo/p2/%package%.json",
+    "available-packages": [
+        "splitpay/enma",
+        "symfony/skeleton"
+    ]
+}

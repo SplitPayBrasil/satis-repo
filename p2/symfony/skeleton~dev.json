@@ -1,0 +1,1019 @@
+{
+    "packages": {
+        "symfony/skeleton": [
+            {
+                "name": "symfony/skeleton",
+                "version": "1.x-dev",
+                "version_normalized": "1.9999999.9999999.9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-nami.git",
+                    "reference": "c4d2dfec674ed2c3ebd4db616f8cd97860aea3c5"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-nami/zipball/c4d2dfec674ed2c3ebd4db616f8cd97860aea3c5",
+                    "reference": "c4d2dfec674ed2c3ebd4db616f8cd97860aea3c5",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/instantiator": "^2.0.0 <2.1",
+                    "doctrine/orm": "^3.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "nelmio/cors-bundle": "^2.4",
+                    "php": ">=8.2",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phprise/stone-sdk": "1.x-dev",
+                    "phpstan/phpdoc-parser": "^1.25",
+                    "spatie/async": "*",
+                    "symfony/asset": "7.2.*",
+                    "symfony/asset-mapper": "7.2.*",
+                    "symfony/console": "7.2.*",
+                    "symfony/doctrine-messenger": "7.2.*",
+                    "symfony/dotenv": "7.2.*",
+                    "symfony/expression-language": "7.2.*",
+                    "symfony/flex": "^2",
+                    "symfony/form": "7.2.*",
+                    "symfony/framework-bundle": "7.2.*",
+                    "symfony/http-client": "7.2.*",
+                    "symfony/http-foundation": "7.2.*",
+                    "symfony/intl": "7.2.*",
+                    "symfony/mailer": "7.2.*",
+                    "symfony/mercure-bundle": "^0.3.8",
+                    "symfony/mime": "7.2.*",
+                    "symfony/monolog-bundle": "^3.0",
+                    "symfony/notifier": "7.2.*",
+                    "symfony/process": "7.2.*",
+                    "symfony/property-access": "7.2.*",
+                    "symfony/property-info": "7.2.*",
+                    "symfony/runtime": "7.2.*",
+                    "symfony/security-bundle": "7.2.*",
+                    "symfony/serializer": "7.2.*",
+                    "symfony/stimulus-bundle": "^2.14",
+                    "symfony/string": "7.2.*",
+                    "symfony/translation": "7.2.*",
+                    "symfony/twig-bundle": "7.2.*",
+                    "symfony/ux-turbo": "^2.14",
+                    "symfony/validator": "7.2.*",
+                    "symfony/web-link": "7.2.*",
+                    "symfony/yaml": "7.2.*",
+                    "twig/extra-bundle": "^2.12|^3.0",
+                    "twig/twig": "^2.12|^3.0"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "phpunit/phpunit": "^9.5",
+                    "symfony/browser-kit": "7.2.*",
+                    "symfony/css-selector": "7.2.*",
+                    "symfony/debug-bundle": "7.2.*",
+                    "symfony/maker-bundle": "^1.0",
+                    "symfony/phpunit-bridge": "^7.0",
+                    "symfony/stopwatch": "7.2.*",
+                    "symfony/web-profiler-bundle": "7.2.*"
+                },
+                "time": "2026-06-01T14:45:30+00:00",
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.2.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd",
+                        "importmap:install": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "Nami - API Financial Gateway",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-nami/tree/v1.7.3",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-nami/issues"
+                }
+            },
+            {
+                "name": "symfony/skeleton",
+                "version": "dev-feat/SP-2513-criar-http-de-testes-do-endpoint-de-saque-da-pagarme",
+                "version_normalized": "dev-feat/SP-2513-criar-http-de-testes-do-endpoint-de-saque-da-pagarme",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-nami.git",
+                    "reference": "ce5285a6be09a4534b56c0db6c63dd0e8ab76c83"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-nami/zipball/ce5285a6be09a4534b56c0db6c63dd0e8ab76c83",
+                    "reference": "ce5285a6be09a4534b56c0db6c63dd0e8ab76c83",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/instantiator": "^2.0.0 <2.1",
+                    "doctrine/orm": "^3.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "nelmio/cors-bundle": "^2.4",
+                    "php": ">=8.2",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phprise/stone-sdk": "1.x-dev",
+                    "phpstan/phpdoc-parser": "^1.25",
+                    "spatie/async": "*",
+                    "symfony/asset": "7.2.*",
+                    "symfony/asset-mapper": "7.2.*",
+                    "symfony/console": "7.2.*",
+                    "symfony/doctrine-messenger": "7.2.*",
+                    "symfony/dotenv": "7.2.*",
+                    "symfony/expression-language": "7.2.*",
+                    "symfony/flex": "^2",
+                    "symfony/form": "7.2.*",
+                    "symfony/framework-bundle": "7.2.*",
+                    "symfony/http-client": "7.2.*",
+                    "symfony/http-foundation": "7.2.*",
+                    "symfony/intl": "7.2.*",
+                    "symfony/mailer": "7.2.*",
+                    "symfony/mercure-bundle": "^0.3.8",
+                    "symfony/mime": "7.2.*",
+                    "symfony/monolog-bundle": "^3.0",
+                    "symfony/notifier": "7.2.*",
+                    "symfony/process": "7.2.*",
+                    "symfony/property-access": "7.2.*",
+                    "symfony/property-info": "7.2.*",
+                    "symfony/runtime": "7.2.*",
+                    "symfony/security-bundle": "7.2.*",
+                    "symfony/serializer": "7.2.*",
+                    "symfony/stimulus-bundle": "^2.14",
+                    "symfony/string": "7.2.*",
+                    "symfony/translation": "7.2.*",
+                    "symfony/twig-bundle": "7.2.*",
+                    "symfony/ux-turbo": "^2.14",
+                    "symfony/validator": "7.2.*",
+                    "symfony/web-link": "7.2.*",
+                    "symfony/yaml": "7.2.*",
+                    "twig/extra-bundle": "^2.12|^3.0",
+                    "twig/twig": "^2.12|^3.0"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "phpunit/phpunit": "^9.5",
+                    "symfony/browser-kit": "7.2.*",
+                    "symfony/css-selector": "7.2.*",
+                    "symfony/debug-bundle": "7.2.*",
+                    "symfony/maker-bundle": "^1.0",
+                    "symfony/phpunit-bridge": "^7.0",
+                    "symfony/stopwatch": "7.2.*",
+                    "symfony/web-profiler-bundle": "7.2.*"
+                },
+                "time": "2026-05-22T20:15:56+00:00",
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.2.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd",
+                        "importmap:install": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "A minimal Symfony project recommended to create bare bones applications",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-nami/tree/feat/SP-2513-criar-http-de-testes-do-endpoint-de-saque-da-pagarme",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-nami/issues"
+                }
+            },
+            {
+                "name": "symfony/skeleton",
+                "version": "dev-feat/SP-2567-Criar-endpoint-de-saque",
+                "version_normalized": "dev-feat/SP-2567-Criar-endpoint-de-saque",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-nami.git",
+                    "reference": "a57889b36bb86e641fc43d587c4d849ac4351fd8"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-nami/zipball/a57889b36bb86e641fc43d587c4d849ac4351fd8",
+                    "reference": "a57889b36bb86e641fc43d587c4d849ac4351fd8",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/instantiator": "^2.0.0 <2.1",
+                    "doctrine/orm": "^3.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "nelmio/cors-bundle": "^2.4",
+                    "php": ">=8.2",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phprise/stone-sdk": "1.x-dev",
+                    "phpstan/phpdoc-parser": "^1.25",
+                    "spatie/async": "*",
+                    "symfony/asset": "7.2.*",
+                    "symfony/asset-mapper": "7.2.*",
+                    "symfony/console": "7.2.*",
+                    "symfony/doctrine-messenger": "7.2.*",
+                    "symfony/dotenv": "7.2.*",
+                    "symfony/expression-language": "7.2.*",
+                    "symfony/flex": "^2",
+                    "symfony/form": "7.2.*",
+                    "symfony/framework-bundle": "7.2.*",
+                    "symfony/http-client": "7.2.*",
+                    "symfony/http-foundation": "7.2.*",
+                    "symfony/intl": "7.2.*",
+                    "symfony/mailer": "7.2.*",
+                    "symfony/mercure-bundle": "^0.3.8",
+                    "symfony/mime": "7.2.*",
+                    "symfony/monolog-bundle": "^3.0",
+                    "symfony/notifier": "7.2.*",
+                    "symfony/process": "7.2.*",
+                    "symfony/property-access": "7.2.*",
+                    "symfony/property-info": "7.2.*",
+                    "symfony/runtime": "7.2.*",
+                    "symfony/security-bundle": "7.2.*",
+                    "symfony/serializer": "7.2.*",
+                    "symfony/stimulus-bundle": "^2.14",
+                    "symfony/string": "7.2.*",
+                    "symfony/translation": "7.2.*",
+                    "symfony/twig-bundle": "7.2.*",
+                    "symfony/ux-turbo": "^2.14",
+                    "symfony/validator": "7.2.*",
+                    "symfony/web-link": "7.2.*",
+                    "symfony/yaml": "7.2.*",
+                    "twig/extra-bundle": "^2.12|^3.0",
+                    "twig/twig": "^2.12|^3.0"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "phpunit/phpunit": "^9.5",
+                    "symfony/browser-kit": "7.2.*",
+                    "symfony/css-selector": "7.2.*",
+                    "symfony/debug-bundle": "7.2.*",
+                    "symfony/maker-bundle": "^1.0",
+                    "symfony/phpunit-bridge": "^7.0",
+                    "symfony/stopwatch": "7.2.*",
+                    "symfony/web-profiler-bundle": "7.2.*"
+                },
+                "time": "2026-05-29T20:39:49+00:00",
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.2.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd",
+                        "importmap:install": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "A minimal Symfony project recommended to create bare bones applications",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-nami/tree/feat/SP-2567-Criar-endpoint-de-saque",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-nami/issues"
+                }
+            },
+            {
+                "name": "symfony/skeleton",
+                "version": "dev-feat/SP-2568-Criar-entidade-Withdraw-criar-migration-e-expor-a-rota-na-API",
+                "version_normalized": "dev-feat/SP-2568-Criar-entidade-Withdraw-criar-migration-e-expor-a-rota-na-API",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-yagami.git",
+                    "reference": "8e5cebc5edead98d5e540622b3bd7a595b3cb32c"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-yagami/zipball/8e5cebc5edead98d5e540622b3bd7a595b3cb32c",
+                    "reference": "8e5cebc5edead98d5e540622b3bd7a595b3cb32c",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "aws/aws-sdk-php": "^3.302",
+                    "beberlei/doctrineextensions": "^1.5",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/orm": "^3.1",
+                    "egulias/email-validator": "^4.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "monolog/monolog": "^3.7",
+                    "nelmio/cors-bundle": "^2.4",
+                    "nesbot/carbon": "^3.7",
+                    "php": ">=8.4",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phpstan/phpdoc-parser": "^1.26",
+                    "ramsey/uuid": "^4.7",
+                    "sentry/sentry-symfony": "^5.0",
+                    "splitpay/support-csv": "^1.1",
+                    "symfony/amazon-mailer": "7.0.*",
+                    "symfony/asset": "7.0.*",
+                    "symfony/cache": "7.0.*",
+                    "symfony/console": "7.0.*",
+                    "symfony/dotenv": "7.0.*",
+                    "symfony/expression-language": "7.0.*",
+                    "symfony/flex": "^2",
+                    "symfony/framework-bundle": "7.0.*",
+                    "symfony/mailer": "7.0.*",
+                    "symfony/messenger": "7.0.*",
+                    "symfony/mime": "7.0.*",
+                    "symfony/monolog-bundle": "*",
+                    "symfony/property-access": "7.0.*",
+                    "symfony/property-info": "7.0.*",
+                    "symfony/runtime": "7.0.*",
+                    "symfony/security-bundle": "7.0.*",
+                    "symfony/serializer": "7.0.*",
+                    "symfony/twig-bundle": "7.0.*",
+                    "symfony/validator": "7.0.*",
+                    "symfony/yaml": "7.0.*"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "dama/doctrine-test-bundle": "^8.2",
+                    "doctrine/doctrine-fixtures-bundle": "^3.6",
+                    "fakerphp/faker": "^1.23",
+                    "hautelook/alice-bundle": "*",
+                    "justinrainbow/json-schema": "*",
+                    "phpunit/phpunit": "^10.5",
+                    "symfony/browser-kit": "7.0.*",
+                    "symfony/css-selector": "7.0.*",
+                    "symfony/http-client": "7.0.*",
+                    "symfony/maker-bundle": "^1.64",
+                    "symfony/phpunit-bridge": "^7.3",
+                    "zenstruck/foundry": "^2.6"
+                },
+                "time": "2026-06-01T15:01:23+00:00",
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.0.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "App\\Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "A minimal Symfony project recommended to create bare bones applications",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-yagami/tree/V1.12.0",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-yagami/issues"
+                }
+            },
+            {
+                "name": "symfony/skeleton",
+                "version": "dev-feat/sp-1878-1875",
+                "version_normalized": "dev-feat/sp-1878-1875",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-yagami.git",
+                    "reference": "81649ae05dfa8c5a8f3f6d824ffcb56f66695cac"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-yagami/zipball/81649ae05dfa8c5a8f3f6d824ffcb56f66695cac",
+                    "reference": "81649ae05dfa8c5a8f3f6d824ffcb56f66695cac",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "aws/aws-sdk-php": "^3.302",
+                    "beberlei/doctrineextensions": "^1.5",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/orm": "^3.1",
+                    "egulias/email-validator": "^4.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "monolog/monolog": "^3.7",
+                    "nelmio/cors-bundle": "^2.4",
+                    "nesbot/carbon": "^3.7",
+                    "php": ">=8.4",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phpstan/phpdoc-parser": "^1.26",
+                    "ramsey/uuid": "^4.7",
+                    "sentry/sentry-symfony": "^5.0",
+                    "splitpay/support-csv": "^1.1",
+                    "symfony/amazon-mailer": "7.0.*",
+                    "symfony/asset": "7.0.*",
+                    "symfony/cache": "7.0.*",
+                    "symfony/console": "7.0.*",
+                    "symfony/dotenv": "7.0.*",
+                    "symfony/expression-language": "7.0.*",
+                    "symfony/flex": "^2",
+                    "symfony/framework-bundle": "7.0.*",
+                    "symfony/mailer": "7.0.*",
+                    "symfony/messenger": "7.0.*",
+                    "symfony/mime": "7.0.*",
+                    "symfony/monolog-bundle": "*",
+                    "symfony/property-access": "7.0.*",
+                    "symfony/property-info": "7.0.*",
+                    "symfony/runtime": "7.0.*",
+                    "symfony/security-bundle": "7.0.*",
+                    "symfony/serializer": "7.0.*",
+                    "symfony/twig-bundle": "7.0.*",
+                    "symfony/validator": "7.0.*",
+                    "symfony/yaml": "7.0.*"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "dama/doctrine-test-bundle": "^8.2",
+                    "doctrine/doctrine-fixtures-bundle": "^3.6",
+                    "fakerphp/faker": "^1.23",
+                    "hautelook/alice-bundle": "*",
+                    "justinrainbow/json-schema": "*",
+                    "phpunit/phpunit": "^10.5",
+                    "symfony/browser-kit": "7.0.*",
+                    "symfony/css-selector": "7.0.*",
+                    "symfony/http-client": "7.0.*",
+                    "symfony/maker-bundle": "^1.64",
+                    "symfony/phpunit-bridge": "^7.3",
+                    "zenstruck/foundry": "^2.6"
+                },
+                "time": "2025-12-22T23:12:23+00:00",
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.0.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "App\\Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "A minimal Symfony project recommended to create bare bones applications",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-yagami/tree/feat/sp-1878-1875",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-yagami/issues"
+                }
+            },
+            {
+                "name": "symfony/skeleton",
+                "version": "dev-feat/sp-1951",
+                "version_normalized": "dev-feat/sp-1951",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-yagami.git",
+                    "reference": "0b2fd5c672e52d1a92782510cd3c7bc67afb4ee1"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-yagami/zipball/0b2fd5c672e52d1a92782510cd3c7bc67afb4ee1",
+                    "reference": "0b2fd5c672e52d1a92782510cd3c7bc67afb4ee1",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "aws/aws-sdk-php": "^3.302",
+                    "beberlei/doctrineextensions": "^1.5",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/orm": "^3.1",
+                    "egulias/email-validator": "^4.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "monolog/monolog": "^3.7",
+                    "nelmio/cors-bundle": "^2.4",
+                    "nesbot/carbon": "^3.7",
+                    "php": ">=8.4",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phpstan/phpdoc-parser": "^1.26",
+                    "ramsey/uuid": "^4.7",
+                    "sentry/sentry-symfony": "^5.0",
+                    "splitpay/support-csv": "^1.1",
+                    "symfony/amazon-mailer": "7.0.*",
+                    "symfony/asset": "7.0.*",
+                    "symfony/cache": "7.0.*",
+                    "symfony/console": "7.0.*",
+                    "symfony/dotenv": "7.0.*",
+                    "symfony/expression-language": "7.0.*",
+                    "symfony/flex": "^2",
+                    "symfony/framework-bundle": "7.0.*",
+                    "symfony/mailer": "7.0.*",
+                    "symfony/messenger": "7.0.*",
+                    "symfony/mime": "7.0.*",
+                    "symfony/monolog-bundle": "*",
+                    "symfony/property-access": "7.0.*",
+                    "symfony/property-info": "7.0.*",
+                    "symfony/runtime": "7.0.*",
+                    "symfony/security-bundle": "7.0.*",
+                    "symfony/serializer": "7.0.*",
+                    "symfony/twig-bundle": "7.0.*",
+                    "symfony/validator": "7.0.*",
+                    "symfony/yaml": "7.0.*"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "dama/doctrine-test-bundle": "^8.2",
+                    "doctrine/doctrine-fixtures-bundle": "^3.6",
+                    "fakerphp/faker": "^1.23",
+                    "hautelook/alice-bundle": "*",
+                    "justinrainbow/json-schema": "*",
+                    "phpunit/phpunit": "^10.5",
+                    "symfony/browser-kit": "7.0.*",
+                    "symfony/css-selector": "7.0.*",
+                    "symfony/http-client": "7.0.*",
+                    "symfony/maker-bundle": "^1.64",
+                    "symfony/phpunit-bridge": "^7.3",
+                    "zenstruck/foundry": "^2.6"
+                },
+                "time": "2026-01-08T14:42:24+00:00",
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.0.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "App\\Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "A minimal Symfony project recommended to create bare bones applications",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-yagami/tree/feat/sp-1951",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-yagami/issues"
+                }
+            },
+            {
+                "name": "symfony/skeleton",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-nami.git",
+                    "reference": "8516b9339f5b09246d39184a9e75ee6af073a6ab"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-nami/zipball/8516b9339f5b09246d39184a9e75ee6af073a6ab",
+                    "reference": "8516b9339f5b09246d39184a9e75ee6af073a6ab",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/instantiator": "^2.0.0 <2.1",
+                    "doctrine/orm": "^3.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "nelmio/cors-bundle": "^2.4",
+                    "php": ">=8.2",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phprise/stone-sdk": "1.x-dev",
+                    "phpstan/phpdoc-parser": "^1.25",
+                    "spatie/async": "*",
+                    "symfony/asset": "7.2.*",
+                    "symfony/asset-mapper": "7.2.*",
+                    "symfony/console": "7.2.*",
+                    "symfony/doctrine-messenger": "7.2.*",
+                    "symfony/dotenv": "7.2.*",
+                    "symfony/expression-language": "7.2.*",
+                    "symfony/flex": "^2",
+                    "symfony/form": "7.2.*",
+                    "symfony/framework-bundle": "7.2.*",
+                    "symfony/http-client": "7.2.*",
+                    "symfony/http-foundation": "7.2.*",
+                    "symfony/intl": "7.2.*",
+                    "symfony/mailer": "7.2.*",
+                    "symfony/mercure-bundle": "^0.3.8",
+                    "symfony/mime": "7.2.*",
+                    "symfony/monolog-bundle": "^3.0",
+                    "symfony/notifier": "7.2.*",
+                    "symfony/process": "7.2.*",
+                    "symfony/property-access": "7.2.*",
+                    "symfony/property-info": "7.2.*",
+                    "symfony/runtime": "7.2.*",
+                    "symfony/security-bundle": "7.2.*",
+                    "symfony/serializer": "7.2.*",
+                    "symfony/stimulus-bundle": "^2.14",
+                    "symfony/string": "7.2.*",
+                    "symfony/translation": "7.2.*",
+                    "symfony/twig-bundle": "7.2.*",
+                    "symfony/ux-turbo": "^2.14",
+                    "symfony/validator": "7.2.*",
+                    "symfony/web-link": "7.2.*",
+                    "symfony/yaml": "7.2.*",
+                    "twig/extra-bundle": "^2.12|^3.0",
+                    "twig/twig": "^2.12|^3.0"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "phpunit/phpunit": "^9.5",
+                    "symfony/browser-kit": "7.2.*",
+                    "symfony/css-selector": "7.2.*",
+                    "symfony/debug-bundle": "7.2.*",
+                    "symfony/maker-bundle": "^1.0",
+                    "symfony/phpunit-bridge": "^7.0",
+                    "symfony/stopwatch": "7.2.*",
+                    "symfony/web-profiler-bundle": "7.2.*"
+                },
+                "time": "2026-05-18T20:16:54+00:00",
+                "default-branch": true,
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.2.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd",
+                        "importmap:install": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "A minimal Symfony project recommended to create bare bones applications",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-nami/tree/main",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-nami/issues"
+                }
+            },
+            {
+                "name": "symfony/skeleton",
+                "version": "dev-v2.x-alpha",
+                "version_normalized": "dev-v2.x-alpha",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:SplitPayBrasil/splitpay-yagami.git",
+                    "reference": "1cd6854b997b40da68d11151a51bdd15fc46aa26"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/SplitPayBrasil/splitpay-yagami/zipball/1cd6854b997b40da68d11151a51bdd15fc46aa26",
+                    "reference": "1cd6854b997b40da68d11151a51bdd15fc46aa26",
+                    "shasum": ""
+                },
+                "require": {
+                    "api-platform/core": "^3.2",
+                    "aws/aws-sdk-php": "^3.302",
+                    "beberlei/doctrineextensions": "^1.5",
+                    "doctrine/dbal": "^3",
+                    "doctrine/doctrine-bundle": "^2.11",
+                    "doctrine/doctrine-migrations-bundle": "^3.3",
+                    "doctrine/orm": "^3.1",
+                    "egulias/email-validator": "^4.0",
+                    "ext-ctype": "*",
+                    "ext-iconv": "*",
+                    "guzzlehttp/guzzle": "^7.8",
+                    "monolog/monolog": "^3.7",
+                    "nelmio/cors-bundle": "^2.4",
+                    "nesbot/carbon": "^3.7",
+                    "php": ">=8.4",
+                    "php-amqplib/php-amqplib": "^3.7",
+                    "phpdocumentor/reflection-docblock": "^5.3",
+                    "phpstan/phpdoc-parser": "^1.26",
+                    "ramsey/uuid": "^4.7",
+                    "sentry/sentry-symfony": "^5.0",
+                    "splitpay/support-csv": "^1.1",
+                    "symfony/amazon-mailer": "7.0.*",
+                    "symfony/asset": "7.0.*",
+                    "symfony/cache": "7.0.*",
+                    "symfony/console": "7.0.*",
+                    "symfony/dotenv": "7.0.*",
+                    "symfony/expression-language": "7.0.*",
+                    "symfony/flex": "^2",
+                    "symfony/framework-bundle": "7.0.*",
+                    "symfony/mailer": "7.0.*",
+                    "symfony/messenger": "7.0.*",
+                    "symfony/mime": "7.0.*",
+                    "symfony/monolog-bundle": "*",
+                    "symfony/property-access": "7.0.*",
+                    "symfony/property-info": "7.0.*",
+                    "symfony/runtime": "7.0.*",
+                    "symfony/security-bundle": "7.0.*",
+                    "symfony/serializer": "7.0.*",
+                    "symfony/twig-bundle": "7.0.*",
+                    "symfony/validator": "7.0.*",
+                    "symfony/yaml": "7.0.*"
+                },
+                "conflict": {
+                    "symfony/symfony": "*"
+                },
+                "replace": {
+                    "symfony/polyfill-ctype": "*",
+                    "symfony/polyfill-iconv": "*",
+                    "symfony/polyfill-php72": "*",
+                    "symfony/polyfill-php73": "*",
+                    "symfony/polyfill-php74": "*",
+                    "symfony/polyfill-php80": "*",
+                    "symfony/polyfill-php81": "*",
+                    "symfony/polyfill-php82": "*"
+                },
+                "require-dev": {
+                    "dama/doctrine-test-bundle": "^8.2",
+                    "doctrine/doctrine-fixtures-bundle": "^3.6",
+                    "fakerphp/faker": "^1.23",
+                    "hautelook/alice-bundle": "*",
+                    "justinrainbow/json-schema": "*",
+                    "phpunit/phpunit": "^10.5",
+                    "symfony/browser-kit": "7.0.*",
+                    "symfony/css-selector": "7.0.*",
+                    "symfony/http-client": "7.0.*",
+                    "symfony/maker-bundle": "^1.64",
+                    "symfony/phpunit-bridge": "^7.3",
+                    "zenstruck/foundry": "^2.6"
+                },
+                "time": "2026-05-12T13:20:04+00:00",
+                "type": "project",
+                "extra": {
+                    "symfony": {
+                        "allow-contrib": false,
+                        "require": "7.0.*"
+                    }
+                },
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "App\\Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "auto-scripts": {
+                        "cache:clear": "symfony-cmd",
+                        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+                    },
+                    "post-install-cmd": [
+                        "@auto-scripts"
+                    ],
+                    "post-update-cmd": [
+                        "@auto-scripts"
+                    ]
+                },
+                "license": [
+                    "proprietary"
+                ],
+                "description": "A minimal Symfony project recommended to create bare bones applications",
+                "support": {
+                    "source": "https://github.com/SplitPayBrasil/splitpay-yagami/tree/v2.x-alpha",
+                    "issues": "https://github.com/SplitPayBrasil/splitpay-yagami/issues"
+                }
+            }
+        ]
+    }
+}
