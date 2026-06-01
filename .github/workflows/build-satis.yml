@@ -1,0 +1,39 @@
+name: Build Satis Repository
+
+on:
+  # Permite rodar manualmente pela aba "Actions" do GitHub
+  workflow_dispatch:
+  
+  # Opcional: Rodar automaticamente a cada push na branch main (útil se você atualizar o satis.json frequentemente)
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathuri/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Install Satis
+        run: composer create-project composer/satis --stability=dev --keep-vcs
+
+      - name: Build Satis
+        run: php satis/bin/satis build satis.json web/
+        env:
+          # Usa o token padrão do GITHUB_TOKEN para autenticar clones HTTPS dos repositórios privados
+          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.GITHUB_TOKEN }}"}}'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./web
+          force_orphan: true
