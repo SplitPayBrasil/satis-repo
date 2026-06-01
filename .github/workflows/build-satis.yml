@@ -6,11 +6,11 @@ on:
     tags:
       - '*'
 
-# Adicione esta seção de permissões
+# Permissões necessárias para o GITHUB_TOKEN funcionar no deploy
 permissions:
-  contents: write  # Necessário para fazer push na branch gh-pages
-  pages: write     # Necessário para interagir com o GitHub Pages
-  id-token: write  # Recomendado para autenticação OIDC
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -41,7 +41,9 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          # Tenta usar o GITHUB_TOKEN primeiro (com as permissões acima)
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Usamos o PAT (SATIS_GITHUB_TOKEN) para garantir permissão de escrita no deploy
+          personal_token: ${{ secrets.SATIS_GITHUB_TOKEN }}
           publish_dir: ./web
           force_orphan: true
+          external_repository: SplitPayBrasil/satis-repo
+          publish_branch: gh-pages
