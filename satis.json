@@ -1,5 +1,5 @@
 {
-    "name": "SplitPay Brasil/Private Packages",
+    "name": "splitpay/private-packages",
     "homepage": "https://splitpaybrasil.github.io/satis-repo",
     "repositories": [
         { "type": "vcs", "url": "git@github.com:SplitPayBrasil/splitpay-enma.git" },
